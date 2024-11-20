@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+
+
+let c="";
+
+while(c!="salir"){
+let a = parseInt(prompt("Ingrese Numero 1"));
+c = prompt("Que operacion desea");
+let b = parseInt(prompt("Ingrese Numero 2"));
+
+if (c === "salir") {
+            document.write("Ha cerrado la calculadora. ¡Hasta luego!");
+            break;}
+
+alert(realizarOperacion(a, c, b));
+}
+
+
+
+
+function realizarOperacion(num1, operacion, num2) {
+    if (operacion == "+") {
+        let suma = num1 + num2;
+        return suma;
+    }
+
+    else if (operacion == "-") {
+        let resta = num1 - num2;
+        return resta;
+    }
+    else if (operacion == "*") {
+        let multiplica = num1 * num2;
+        return multiplica;
+        
+    } 
+    else if (operacion == "/")  {
+        if (num2==0) {
+            return "Pendejo";
+        }
+        let division = num1 / num2;
+        return division;
+        }
+    
+
+    else {
+        document.write("Seleccion mala");
+    }
+
+}
+    
+    </script>
+</body>
+</html>
